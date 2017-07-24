@@ -6,9 +6,9 @@ println "#######################################################################
 println "Reading project configuration from json"
 
 println "Proxy settings"
-println System.getProperties().get("proxySet")
-println System.getProperties().get("proxyHost")
-println System.getProperties().get("proxyPort")
+System.getProperties().put("proxySet", "true");
+System.getProperties().put("proxyHost", "hrzg-proxy01.etk.extern.eu.ericsson.se");
+System.getProperties().put("proxyPort", "8080");
 
 hudson.FilePath workspace = hudson.model.Executor.currentExecutor().getCurrentWorkspace()
 File file = new File("${workspace}/jenkins/seedjobs/edmp-project-configuration.json")

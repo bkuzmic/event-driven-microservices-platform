@@ -5,6 +5,11 @@ import hudson.*
 println "############################################################################################################"
 println "Reading project configuration from json"
 
+println "Proxy settings"
+println System.getProperties().get("proxySet");
+println System.getProperties().get("proxyHost");
+println System.getProperties().get("proxyPort";
+
 hudson.FilePath workspace = hudson.model.Executor.currentExecutor().getCurrentWorkspace()
 File file = new File("${workspace}/jenkins/seedjobs/edmp-project-configuration.json")
 def slurper = new JsonSlurper()
